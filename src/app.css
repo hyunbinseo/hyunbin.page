@@ -1,0 +1,95 @@
+/* Normalization */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Goorm Sans', monospace;
+	line-height: 1.5;
+	margin: 0;
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+	margin: 0;
+}
+
+ol,
+ul,
+menu {
+	margin: 0;
+	padding: 0;
+}
+
+canvas,
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+/* Container */
+
+body {
+	padding: 1rem;
+}
+
+@media (min-width: 22.5rem) {
+	body {
+		padding: 1.5rem;
+	}
+}
+
+@media (min-width: 32rem) {
+	html {
+		min-height: 100%;
+		padding: 4rem 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: lightgray;
+	}
+
+	body {
+		width: 28rem;
+		border-radius: 0.5rem;
+		background-color: white;
+	}
+}
+
+/* Global Styles */
+
+h1 {
+	font-size: 1.5rem;
+}
+
+h2 {
+	font-size: 1.25rem;
+}
+
+a {
+	text-underline-offset: 5px;
+	color: #1e3a8a; /* blue.900 */
+}
+a:active {
+	color: #7f1d1d; /* red.900 */
+}
+a:visited {
+	color: #4c1d95; /* violet.900 */
+}
