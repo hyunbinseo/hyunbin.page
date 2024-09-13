@@ -1,8 +1,3 @@
-import { dev } from '$app/environment';
-
-export const csr = !!dev;
-export const prerender = true;
-
 type EmailHref = `mailto:${string}`;
 type HttpsHref = `https://${string}`;
 

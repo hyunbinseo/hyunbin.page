@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../app.css';
+	import './page.css';
 	import profileImage from './profile.avif';
 
 	const title = '서현빈 | Hyunbin Seo';
@@ -9,6 +9,14 @@
 </script>
 
 <svelte:head>
+	<link rel="preconnect" href="https://statics.goorm.io" crossorigin="anonymous" />
+	<link
+		rel="preload"
+		as="style"
+		crossorigin=""
+		href="https://statics.goorm.io/fonts/GoormSans/v1.0.0/GoormSans.min.css"
+	/>
+	<link rel="stylesheet" href="https://statics.goorm.io/fonts/GoormSans/v1.0.0/GoormSans.min.css" />
 	<title>{title}</title>
 	<meta property="og:title" content={title} />
 	<meta name="description" content={description} />
