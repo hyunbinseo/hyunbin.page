@@ -68,33 +68,36 @@
 			오픈소스를 활용해서 빠르게 개발하고 사업화하는 것이 중요하다고 생각할 수 있으나, OSS를 활용한
 			뒤 생각이 완전히 바뀌었습니다.
 		</p>
-		<h3 class="mt-10 text-lg font-semibold">발견한 문제를 기록합니다.</h3>
-		<p class="mt-4">
-			오픈소스 소프트웨어 버그를 직접 수정하는 것이 유일하고 진정한 기여 방법이라고 생각했습니다.
-			하지만 OSS를 사용하다 보니 겪은 문제나 제안 사항을 공개적으로 기록하는 것 또한 중요함을 알게
-			됐습니다. GitHub Issue 상에 게시된 글과 댓글을 통해 어떤 문제가 있는지, 어떻게 해결되고 있는지
-			등을 확인하고 공유하기 때문입니다.
-		</p>
-		<p class="mt-4">
-			그래서 개발 도중에 마주친 문제 중 아직 기록되지 않는 것은 무조건 시간을 할애해 기록합니다.
-			그리고 확실하고 간결한 {@render anchor(
-				'Minimal reproducible example',
-				'https://en.wikipedia.org/wiki/Minimal_reproducible_example'
-			)}을 작성하기 위해, 우회 방법을 발견해 기록하려고 노력합니다. 이를 통해 커뮤니티 구성원,
-			그리고 비슷한 문제를 겪고 있을 제 미래 시행착오를 줄일 수 있음에 큰 보람을 느낍니다.
-		</p>
-		<h3 class="mt-10 text-lg font-semibold">직접 개발해서 공개합니다.</h3>
-		<p class="mt-4">
-			비슷한 맥락에서 "내가 반복해서 필요한데, 남들도 필요하지 않을까?"라는 생각으로 새로운 오픈소스
-			프로젝트를 만들기도 합니다. 구글 캘린더에 대한민국 공휴일이 제대로 표시되지 않아 만든 {@render anchor(
-				'공개 캘린더 및 패키지',
-				'https://github.com/hyunbinseo/holidays-kr'
-			)}, macOS를 처음 쓰고 파일명 자소 분리에 괴로워하다 만든 {@render anchor(
-				'자모야 모여라',
-				'https://github.com/hyunbinseo/jamoya.one'
-			)}가 대표적입니다. 또한 이러한 프로젝트들을 꾸준히 유지보수하면서 새롭게 배운 개발 지식, 신규
-			런타임 API를 가장 먼저 적용하는 장으로 활용하고 있습니다.
-		</p>
+		<section class="mt-9 border-l-[1px] pl-4">
+			<h3 class="text-lg font-semibold">발견한 문제를 기록합니다.</h3>
+			<p class="mt-4">
+				오픈소스 소프트웨어 버그를 직접 수정하는 것이 유일하고 진정한 기여 방법이라고 생각했습니다.
+				하지만 OSS를 사용하다 보니 겪은 문제나 제안을 공개적으로 기록하는 것 또한 중요함을 알게
+				됐습니다. GitHub Issue 상에 게시된 글과 댓글을 통해 어떤 문제가 어떻게 해결되고 있는지를
+				확인할 수 있기 때문입니다.
+			</p>
+			<p class="mt-4">
+				그래서 개발 도중에 마주친 문제들은 검색해 본 뒤 무조건 시간을 들여 기록합니다. 이 과정에서
+				확실하고 간결한 {@render anchor(
+					'Minimal reproducible example',
+					'https://en.wikipedia.org/wiki/Minimal_reproducible_example'
+				)}을 작성하려고, 우회 방법을 찾아서 공유하려고 노력합니다. 이를 통해 커뮤니티 구성원의,
+				그리고 비슷한 문제를 겪고 있을 제 시행착오를 줄일 수 있어서 보람을 느낍니다.
+			</p>
+		</section>
+		<section class="mt-9 border-l-[1px] pl-4">
+			<h3 class="text-lg font-semibold">직접 개발해서 공개합니다.</h3>
+			<p class="mt-4">
+				비슷한 맥락에서 "내가 반복해서 필요한데, 남들도 필요하지 않을까?"라는 생각을 가지고 새로운
+				오픈소스 프로젝트를 만들기도 합니다. 구글 캘린더에 대한민국의 공휴일이 제대로 표시되지 않아
+				만든 {@render anchor('공개 캘린더', 'https://github.com/hyunbinseo/holidays-kr')}, macOS
+				파일을 윈도에 보내면 발생하는 자소 분리를 해결하는 {@render anchor(
+					'자모야 모여라',
+					'https://github.com/hyunbinseo/jamoya.one'
+				)}가 대표적입니다. 이들을 꾸준히 유지보수하려고 노력하며, 새로운 개발 지식이나 신규 API를
+				가장 먼저 적용하는 장으로 활용하고 있습니다.
+			</p>
+		</section>
 	</article>
 </section>
 
@@ -169,8 +172,8 @@
 					<tr>
 						<td>{@render anchor('1026812690000', 'https://doi.org/10.8080/1020160178841')}</td>
 						<td>
-							워치 타입 이동통신 단말을 위한 가상 및 증강현실 구동 장치, 이를 이용한 인터페이스
-							시스템 및 방법
+							워치 타입 이동통신 단말을 위한 가상 및 증강현실 구동 장치, <br />
+							이를 이용한 인터페이스 시스템 및 방법
 						</td>
 					</tr>
 				</tbody>
@@ -201,13 +204,14 @@
 
 <style lang="postcss">
 	:root {
+		background-color: rgb(246, 248, 250);
 		font-family: 'Pretendard Variable', sans-serif;
 	}
 	a {
 		@apply cursor-pointer text-[#0000EE] underline visited:text-[#551A8B] active:text-[#FF0000];
 	}
 	table.patents > tbody > tr > td:first-child {
-		@apply pr-2 font-mono;
+		@apply pr-4 align-top font-mono;
 	}
 	@page {
 		size: A4 portrait;
@@ -225,6 +229,9 @@
 			--page-height: 29.7cm;
 			--page-padding: 0.25in;
 			--page-gap-y: 0.5in;
+		}
+		.page {
+			@apply shadow;
 		}
 	}
 	@media screen and (min-width: 23.54cm) {
