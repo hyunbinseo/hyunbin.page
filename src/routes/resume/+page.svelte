@@ -6,6 +6,11 @@
 	import profile from './profile.avif';
 </script>
 
+<svelte:head>
+	<title>서현빈 | 자기소개서 및 이력서</title>
+	<meta name="robots" content="noindex" />
+</svelte:head>
+
 {#snippet anchor(text: string, href: string)}
 	<a {href} target="_blank">{text}</a>
 {/snippet}
@@ -93,12 +98,116 @@
 	</article>
 </section>
 
+<section class="page">
+	<article class="space-y-6">
+		<h2 class="text-2xl font-semibold">경력 사항</h2>
+		<section>
+			<h3 class="text-lg font-semibold">다양한학습자를위한 주식회사</h3>
+			<p>공동창업자, 기술이사 ('19/11 - 현재)</p>
+			<div class="overflow-x-auto whitespace-nowrap">
+				<ul class="mt-2.5 list-inside list-disc">
+					<li>인천형 예비 사회적 기업 지정 (사회 서비스 제공형, 2024-2027)</li>
+					<li>한국교원대학교 기초 문해 교육 온라인 시스템 공급 (2023-2024)</li>
+					<li>(사)한국국제기아대책기구, 보호대상 아동 문해력 증진 사업 (2024)</li>
+					<li>사회복지법인 기아대책, '온라인 기초학력 교실' 사업 (2021-2023)</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<h3 class="text-lg font-semibold">주식회사 리얼햅틱스</h3>
+			<p>공동창업자, 운영총괄 ('16/07 - '18/06)</p>
+			<div class="overflow-x-auto whitespace-nowrap">
+				<ul class="mt-2.5 list-inside list-disc">
+					<li>NIPA 가상현실 5대 선도 프로젝트 참여 (2016)</li>
+					<li>롯데 액셀러레이터 L-Camp 1기 기업 선발 (2016)</li>
+					<li>신용보증기금 TOP20 스타트업 선정 (2016)</li>
+					<li>단국대학교 링크사업단 창업경진대회 대상 (2016)</li>
+				</ul>
+			</div>
+		</section>
+	</article>
+	<hr class="my-6" />
+	<article class="space-y-4">
+		<h2 class="text-xl font-semibold">기술 스택</h2>
+		<p>최근에는 SvelteKit, Drizzle ORM 프로젝트를 Node.js VPS 상에 배포하고 있습니다.</p>
+		<ul class="list-inside list-disc">
+			<li>TypeScript, JavaScript (JSDoc)</li>
+			<li>
+				<strong>FE:</strong>
+				Svelte, Tailwind CSS, HTML, CSS
+			</li>
+			<li>
+				<strong>BE:</strong>
+				Node.js, SvelteKit, Drizzle ORM
+			</li>
+			<li>
+				<strong>SaaS:</strong>
+				Cloudflare Pages (Serverless)
+			</li>
+		</ul>
+	</article>
+	<hr class="my-6" />
+	<article class="space-y-4">
+		<h2 class="text-xl font-semibold">등록 특허</h2>
+		<div class="overflow-auto whitespace-nowrap">
+			<table class="patents">
+				<thead class="sr-only">
+					<tr>
+						<th>등록번호</th>
+						<th>발명의 명칭</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{@render anchor('1026927010000', 'https://doi.org/10.8080/1020160170229')}</td>
+						<td>집단 물리 상호작용을 위한 미들웨어 장치 및 시스템</td>
+					</tr>
+					<tr>
+						<td>{@render anchor('1026715120000', 'https://doi.org/10.8080/1020170022017')}</td>
+						<td>화상 정보를 이용한 햅틱 효과 출력 시스템 및 방법</td>
+					</tr>
+					<tr>
+						<td>{@render anchor('1026812690000', 'https://doi.org/10.8080/1020160178841')}</td>
+						<td>
+							워치 타입 이동통신 단말을 위한 가상 및 증강현실 구동 장치, 이를 이용한 인터페이스
+							시스템 및 방법
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</article>
+	<hr class="my-6" />
+	<article class="space-y-4">
+		<h2 class="text-xl font-semibold">학력 및 병역</h2>
+		<ul class="list-inside list-disc">
+			<li>서울대학교 {@render anchor('자유전공학부', 'https://cls.snu.ac.kr')}</li>
+			<li>2025년 8월 학사 졸업 예정</li>
+			<li>{@render anchor('연합전공 정보문화학', 'https://isc.snu.ac.kr/')}, 경제학 주전공</li>
+			<li>육군 이병 보충역 복무만료 (소집해제)</li>
+		</ul>
+	</article>
+</section>
+
+<footer class="mt-[2em] text-center text-smallish max-a4x:px-[2em]">
+	본 자기소개서 및 이력서의 소스코드는
+	<span class="xxs:inline-block">
+		{@render anchor(
+			'GitHub',
+			'https://github.com/hyunbinseo/hyunbin.page/blob/main/src/routes/resume/%2Bpage.svelte'
+		)}에서 확인하실 수 있습니다.
+	</span>
+</footer>
+
 <style lang="postcss">
 	:root {
 		font-family: 'Pretendard Variable', sans-serif;
 	}
 	a {
 		@apply cursor-pointer text-[#0000EE] underline visited:text-[#551A8B] active:text-[#FF0000];
+	}
+	table.patents > tbody > tr > td:first-child {
+		@apply pr-2 font-mono;
 	}
 	@page {
 		size: A4 portrait;
