@@ -24,17 +24,17 @@
 </header>
 
 <section class="page">
-	<header class="flex h-40 justify-between">
+	<header class="flex gap-4 max-sm:flex-col-reverse sm:justify-between">
 		<div class="flex flex-col">
-			<h1 class="text-2xl font-bold">공개적으로 기록하고 공유합니다.</h1>
+			<h1 class="text-xl font-bold sm:text-2xl">공개적으로 기록하고 공유합니다.</h1>
 			<p class="mt-0.5">오픈소스에 진심인 5년 차 개발자 서현빈입니다.</p>
-			<ul class="mt-auto list-inside list-disc">
+			<ul class="mt-4 list-inside list-disc sm:mt-auto">
 				<li>GitHub <a href="https://github.com/hyunbinseo/">@hyunbinseo</a></li>
 				<li>LinkedIn <a href="https://www.linkedin.com/in/hyunbinseo/">@hyunbinseo</a></li>
 				<li>Email <a href="mailto:hyunbin@duck.com">hyunbin@duck.com</a></li>
 			</ul>
 		</div>
-		<img src={profile} class="aspect-square shrink-0 max-sm:hidden" alt="서현빈 증명사진" />
+		<img src={profile} class="size-32 shrink-0 sm:size-40" alt="서현빈 증명사진" />
 	</header>
 	<article class="mt-10">
 		<h2 class="text-xl font-semibold">소개</h2>
@@ -102,7 +102,7 @@
 </section>
 
 <section class="page">
-	<article class="space-y-6">
+	<article class="space-y-8">
 		<h2 class="text-2xl font-semibold">경력 사항</h2>
 		<section>
 			<h3 class="text-lg font-semibold">다양한학습자를위한 주식회사</h3>
@@ -132,63 +132,67 @@
 	<hr class="my-6" />
 	<article class="space-y-4">
 		<h2 class="text-xl font-semibold">기술 스택</h2>
-		<p>최근에는 SvelteKit, Drizzle ORM 프로젝트를 Node.js VPS 상에 배포하고 있습니다.</p>
-		<ul class="list-inside list-disc">
-			<li>TypeScript, JavaScript (JSDoc)</li>
-			<li>
-				<strong>FE:</strong>
-				Svelte, Tailwind CSS, HTML, CSS
-			</li>
-			<li>
-				<strong>BE:</strong>
-				Node.js, SvelteKit, Drizzle ORM
-			</li>
-			<li>
-				<strong>SaaS:</strong>
-				Cloudflare Pages (Serverless)
-			</li>
-		</ul>
+		<div class="overflow-x-auto whitespace-nowrap">
+			<ul class="list-inside list-disc">
+				<li>
+					<strong>언어:</strong>
+					TypeScript, JavaScript (JSDoc)
+				</li>
+				<li>
+					<strong>FE:</strong>
+					Svelte, Tailwind CSS, HTML, CSS
+				</li>
+				<li>
+					<strong>BE:</strong>
+					Node.js, SvelteKit, Drizzle ORM
+				</li>
+				<li>
+					<strong>SaaS:</strong>
+					Cloudflare, Amazon Lightsail
+				</li>
+			</ul>
+		</div>
 	</article>
 	<hr class="my-6" />
 	<article class="space-y-4">
 		<h2 class="text-xl font-semibold">등록 특허</h2>
-		<div class="overflow-auto whitespace-nowrap">
-			<table class="patents">
-				<thead class="sr-only">
-					<tr>
-						<th>등록번호</th>
-						<th>발명의 명칭</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>{@render anchor('1026927010000', 'https://doi.org/10.8080/1020160170229')}</td>
-						<td>집단 물리 상호작용을 위한 미들웨어 장치 및 시스템</td>
-					</tr>
-					<tr>
-						<td>{@render anchor('1026715120000', 'https://doi.org/10.8080/1020170022017')}</td>
-						<td>화상 정보를 이용한 햅틱 효과 출력 시스템 및 방법</td>
-					</tr>
-					<tr>
-						<td>{@render anchor('1026812690000', 'https://doi.org/10.8080/1020160178841')}</td>
-						<td>
-							워치 타입 이동통신 단말을 위한 가상 및 증강현실 구동 장치, <br />
-							이를 이용한 인터페이스 시스템 및 방법
-						</td>
-					</tr>
-				</tbody>
-			</table>
+		<div class="overflow-x-auto whitespace-nowrap">
+			<ol class="list-inside list-decimal">
+				<li>
+					<!-- 1026715120000 (2024.05.28) -->
+					{@render anchor(
+						'화상 정보를 이용한 햅틱 효과 출력 시스템 및 방법',
+						'https://doi.org/10.8080/1020170022017'
+					)}
+				</li>
+				<li>
+					<!-- 1026812690000 (2024.06.29) -->
+					{@render anchor(
+						'워치 타입 이동통신 단말을 위한 가상 및 증강현실 구동 장치, 이를 이용한 인터페이스 시스템 및 방법',
+						'https://doi.org/10.8080/1020160178841'
+					)}
+				</li>
+				<li>
+					<!-- 1026927010000 (2024.08.02) -->
+					{@render anchor(
+						'집단 물리 상호작용을 위한 미들웨어 장치 및 시스템',
+						'https://doi.org/10.8080/1020160170229'
+					)}
+				</li>
+			</ol>
 		</div>
 	</article>
 	<hr class="my-6" />
 	<article class="space-y-4">
 		<h2 class="text-xl font-semibold">학력 및 병역</h2>
-		<ul class="list-inside list-disc">
-			<li>서울대학교 {@render anchor('자유전공학부', 'https://cls.snu.ac.kr')}</li>
-			<li>2025년 8월 학사 졸업 예정</li>
-			<li>{@render anchor('연합전공 정보문화학', 'https://isc.snu.ac.kr/')}, 경제학 주전공</li>
-			<li>육군 이병 보충역 복무만료 (소집해제)</li>
-		</ul>
+		<div class="overflow-x-auto whitespace-nowrap">
+			<ul class="list-inside list-disc">
+				<li>서울대학교 {@render anchor('자유전공학부', 'https://cls.snu.ac.kr')}</li>
+				<li>2025년 8월 학사 졸업 예정</li>
+				<li>{@render anchor('연합전공 정보문화학', 'https://isc.snu.ac.kr/')}, 경제학 주전공</li>
+				<li>육군 이병 보충역 복무만료 (소집해제)</li>
+			</ul>
+		</div>
 	</article>
 </section>
 
@@ -209,9 +213,6 @@
 	}
 	a {
 		@apply cursor-pointer text-[#0000EE] underline visited:text-[#551A8B] active:text-[#FF0000];
-	}
-	table.patents > tbody > tr > td:first-child {
-		@apply pr-4 align-top font-mono;
 	}
 	@page {
 		size: A4 portrait;
