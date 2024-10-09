@@ -26,8 +26,9 @@
 <section class="page">
 	<header class="flex gap-4 max-sm:flex-col-reverse sm:justify-between">
 		<div class="flex flex-col">
-			<h1 class="text-xl font-bold sm:text-2xl">공개적으로 기록하고 공유합니다.</h1>
-			<p class="mt-0.5">오픈소스에 진심인 5년 차 개발자 서현빈입니다.</p>
+			<h1 class="text-xl font-bold sm:text-2xl">서현빈 | Hyunbin Seo</h1>
+			<!-- TODO This value should be updated yearly. -->
+			<p class="mt-0.5">오픈소스에 진심인 5년 차 웹 개발자</p>
 			<ul class="mt-4 list-inside list-disc sm:mt-auto">
 				<li>GitHub <a href="https://github.com/hyunbinseo/">@hyunbinseo</a></li>
 				<li>LinkedIn <a href="https://www.linkedin.com/in/hyunbinseo/">@hyunbinseo</a></li>
@@ -57,24 +58,23 @@
 		<h2 class="text-xl font-semibold">COO에서 CTO로</h2>
 		<p class="mt-2">
 			2020년부터 소프트웨어 개발을 독학해 지금은 자사 서비스를 직접 작성하는 기술이사가 되었습니다.
-			그전까지는 운영총괄을 맡으며 신규 사업 제안, 투자 유치 등에 집중했으며, 그 과정에서 노무, 세무
-			등 실무도 겸했었습니다.
+			그전까지는 운영총괄을 맡으며 신규 사업 제안, 투자 유치 등에 집중했으며, 노무나 세무와 같은
+			실무도 겸했었습니다.
 		</p>
 	</article>
 	<article class="mt-10">
-		<h2 class="text-xl font-semibold">"오픈소스 개발자, 창업가"</h2>
+		<h2 class="text-xl font-semibold">오픈소스 생태계에 기여합니다.</h2>
 		<p class="mt-2">
-			다소 모순적으로 보이는 두 가지를 모두 하고 있습니다. 소규모 스타트업에서는 이미 공개된
-			오픈소스를 활용해서 빠르게 개발하고 사업화하는 것이 중요하다고 생각할 수 있으나, OSS를 활용한
-			뒤 생각이 완전히 바뀌었습니다.
+			개발을 입문했을 때에는 오픈소스 소프트웨어를 일방적으로 활용하는데 급급했습니다. 지금은 그렇지
+			않습니다.
 		</p>
 		<section class="mt-9 border-l-[1px] pl-4">
 			<h3 class="text-lg font-semibold">발견한 문제를 기록합니다.</h3>
 			<p class="mt-4">
-				오픈소스 소프트웨어 버그를 직접 수정하는 것이 유일하고 진정한 기여 방법이라고 생각했습니다.
-				하지만 OSS를 사용하다 보니 겪은 문제나 제안을 공개적으로 기록하는 것 또한 중요함을 알게
-				됐습니다. GitHub Issue 상에 게시된 글과 댓글을 통해 어떤 문제가 어떻게 해결되고 있는지를
-				확인할 수 있기 때문입니다.
+				처음에는 버그를 수정하는 PR 작성만이 오픈소스에 기여할 수 있는 방법이라고 생각했습니다.
+				하지만 경험이 쌓이면서 겪은 문제, 우회 방법, 제안 사항 등을 공개적으로 기록해 두는 것이
+				중요함을 알게 됐습니다. 저 또한 누군가 적어둔 GitHub Issue, PR을 매일 검색하고 참고하기
+				때문입니다.
 			</p>
 			<p class="mt-4">
 				그래서 개발 도중에 마주친 문제들은 검색해 본 뒤 무조건 시간을 들여 기록합니다. 이 과정에서
@@ -102,6 +102,20 @@
 </section>
 
 <section class="page">
+	<article>
+		<h2 class="text-2xl font-semibold">학력</h2>
+		<div class="overflow-x-auto whitespace-nowrap">
+			<p class="mt-4">
+				서울대학교 {@render anchor('자유전공학부', 'https://cls.snu.ac.kr')}
+				(<time datetime="2016-03">'16/03</time> - <time datetime="2025-08">'25/08</time> 예정)
+			</p>
+			<ul class="mt-2 list-inside list-disc">
+				<li>{@render anchor('연합전공 정보문화학', 'https://isc.snu.ac.kr/')} 주전공</li>
+				<li>경제학 주전공</li>
+			</ul>
+		</div>
+	</article>
+	<hr class="my-6" />
 	<article class="space-y-8">
 		<h2 class="text-2xl font-semibold">경력 사항</h2>
 		<section>
@@ -131,31 +145,7 @@
 	</article>
 	<hr class="my-6" />
 	<article class="space-y-4">
-		<h2 class="text-xl font-semibold">기술 스택</h2>
-		<div class="overflow-x-auto whitespace-nowrap">
-			<ul class="list-inside list-disc">
-				<li>
-					<strong>언어:</strong>
-					TypeScript, JavaScript (JSDoc)
-				</li>
-				<li>
-					<strong>FE:</strong>
-					Svelte, Tailwind CSS, HTML, CSS
-				</li>
-				<li>
-					<strong>BE:</strong>
-					Node.js, SvelteKit, Drizzle ORM
-				</li>
-				<li>
-					<strong>SaaS:</strong>
-					Cloudflare, Amazon Lightsail
-				</li>
-			</ul>
-		</div>
-	</article>
-	<hr class="my-6" />
-	<article class="space-y-4">
-		<h2 class="text-xl font-semibold">등록 특허</h2>
+		<h2 class="text-2xl font-semibold">등록 특허</h2>
 		<div class="overflow-x-auto whitespace-nowrap">
 			<ol class="list-inside list-decimal">
 				<li>
@@ -184,13 +174,25 @@
 	</article>
 	<hr class="my-6" />
 	<article class="space-y-4">
-		<h2 class="text-xl font-semibold">학력 및 병역</h2>
+		<h2 class="text-2xl font-semibold">기술 스택</h2>
 		<div class="overflow-x-auto whitespace-nowrap">
 			<ul class="list-inside list-disc">
-				<li>서울대학교 {@render anchor('자유전공학부', 'https://cls.snu.ac.kr')}</li>
-				<li>2025년 8월 학사 졸업 예정</li>
-				<li>{@render anchor('연합전공 정보문화학', 'https://isc.snu.ac.kr/')}, 경제학 주전공</li>
-				<li>육군 이병 보충역 복무만료 (소집해제)</li>
+				<li>
+					<strong>언어:</strong>
+					TypeScript, JavaScript (JSDoc)
+				</li>
+				<li>
+					<strong>FE:</strong>
+					Svelte, Tailwind CSS, HTML, CSS
+				</li>
+				<li>
+					<strong>BE:</strong>
+					Node.js, SvelteKit, Drizzle ORM
+				</li>
+				<li>
+					<strong>SaaS:</strong>
+					Cloudflare, Amazon Lightsail
+				</li>
 			</ul>
 		</div>
 	</article>
